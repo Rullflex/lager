@@ -1,0 +1,482 @@
+extends modules/layout/_layout
+
+prepend head
+	title ДЕТСКИЙ ВОЕННО-СПОРТИВНЫЙ ЛАГЕРЬ “ФОРПОСТ” В ПОДМОСКОВЬЕ
+	meta(name="description", content="ДЕТСКИЙ ВОЕННО-СПОРТИВНЫЙ ЛАГЕРЬ “ФОРПОСТ” В ПОДМОСКОВЬЕ")
+
+block header
+	header.header(data-uk-sticky="top: 100vh; animation: uk-animation-slide-top;")
+		.container 
+			.header__row 
+				a.header__logo(href="/")
+					p.header__logo-text На Главную
+					picture 
+						source(media=`(min-width: ${lg}px)` srcset=ipl)
+						source(media=`(min-width: 0px)` srcset!=`${assets}logo-sm.webp`  type=`image/webp`)
+						source(media=`(min-width: 0px)` srcset!=`${assets}logo-sm.png`  type=`image/png`)
+						img(src=ipl alt='').header__logo-img
+				ul.header__menu
+					li.header__menu-item
+						a.header__menu-link(href="#about" data-uk-scroll) О нас
+					li.header__menu-item
+						a.header__menu-link(href="#tour" data-uk-scroll) Смены
+					li.header__menu-item
+						a.header__menu-link(href="#accommodation" data-uk-scroll="offset: 30") Проживание
+					li.header__menu-item
+						a.header__menu-link(href="#news" data-uk-scroll="offset: 30") Новости
+					li.header__menu-item
+						a.header__menu-link(href="#contacts" data-uk-scroll) Контакты
+				.header__phones 
+					a.addit(href=`tel:+79661314129`) +7 (966) 131-41-29
+					a(href=`tel:+74957659016`) +7 (495) 765-90-16
+				a.header__burger.uk-icon(href="#")
+					- for (var x = 0; x < 4; x++) 
+						i
+				.header__drop(data-uk-dropdown="mode: click; pos: bottom-right; boundary: .header; boundary-align: true; animation: uk-animation-slide-right-small; duration: 300")
+					.header__drop-main
+						ul.header__drop-menu
+							li.header__drop-item
+								a.header__drop-link(href="#" data-uk-scroll) Программа
+							li.header__drop-item
+								a.header__drop-link(href="#" data-uk-scroll) Стоимость
+							li.header__drop-item
+								a.header__drop-link(href="#news" data-uk-scroll="offset: 30") Новости
+							li.header__drop-item
+								a.header__drop-link(href="#accommodation" data-uk-scroll="offset: 30") Проживание
+						a.header__drop-tel(href=`tel:+74957659016`) +7 (495) 765-90-16
+
+block footer 
+	footer.footer 
+		.footer__ctn.container
+			a.footer__logo(href="/")
+				img(src=`${assets}logo-lg.png` alt='')
+			ul.footer__menu
+				li.footer__menu-item
+					a.footer__menu-link(href="#about" data-uk-scroll) О нас
+				li.footer__menu-item
+					a.footer__menu-link(href="#tour" data-uk-scroll) Смены
+				li.footer__menu-item
+					a.footer__menu-link(href="#accommodation" data-uk-scroll="offset: 30") Проживание
+				li.footer__menu-item
+					a.footer__menu-link(href="#news" data-uk-scroll="offset: 30") Новости
+				li.footer__menu-item
+					a.footer__menu-link(href="#contacts" data-uk-scroll) Контакты
+			.footer__phones 
+				a(href=`tel:84957659016`) 8 (495) 765-90-16
+				a(href=`tel:89661314129`) 8 (966) 131-41-29
+			.footer__socials
+				a(href=`#` target="_blank")
+					img.lazyload(src=`${assets}icon-vk.png` alt="")
+				a(href=`#` target="_blank")
+					img.lazyload(src=`${assets}icon-inst.png` alt="")
+				a(href=`#` target="_blank")
+					img.lazyload(src=`${assets}icon-yt.png` alt="")
+				a(href=`#` target="_blank")
+					img.lazyload(src=`${assets}icon-fb.png` alt="")
+			.footer__creds
+				p.footer__creds-ooo ООО "Детский клуб "Охотники за удачей"
+				p.footer__creds-inn ИНН 5029161296
+				a(href="#" target="_blank").footer__creds-policy Политика конфиденциальности
+block content
+	main.main 
+		section.s1 
+			.s1__ibg.ibg 
+				+picture-min(jpg, `${assets}s1-bg`, `${assets}s1-bg`)
+			.container 
+				.s1__header 
+					a.s1__header-logo(href="/")
+						picture 
+							source(media=`(min-width: ${lg}px)` srcset!=`${assets}logo-lg@2x.webp 2x, ${assets}logo-lg.webp 1x`  type=`image/webp`)
+							source(media=`(min-width: ${lg}px)` srcset!=`${assets}logo-lg@2x.png 2x, ${assets}logo-lg.png 1x`  type=`image/png`)
+							source(media=`(min-width: 0px)` srcset=ipl)
+							img(src=`${assets}logo-lg.png` alt='')
+					ul.s1__header__menu
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#about" data-uk-scroll) О нас
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#tour" data-uk-scroll) Смены
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#accommodation" data-uk-scroll="offset: 30") Проживание
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#news" data-uk-scroll="offset: 30") Новости
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#contacts" data-uk-scroll) Контакты
+					.s1__header__contacts 
+						.s1__header__phones 
+							a(href=`tel:+79661314129`) +7 (966) 131-41-29
+							a(href=`tel:+74957659016`) +7 (495) 765-90-16
+						.s1__header__contacts-ctn
+							.s1__header__contacts-age 10+
+							a.s1__header__contacts-btn.uk-button.btn-outline-primary(href="#callback" data-uk-toggle) ЗАКАЗАТЬ ЗВОНОК
+				h1.s1__title #[span.s1__title-name.d-lg-none  “ФОРПОСТ” #[br]] ДЕТСКИЙ ВОЕННО-СПОРТИВНЫЙ ЛАГЕРЬ #[span.s1__title-name.d-none.d-lg-inline  “ФОРПОСТ”] В ПОДМОСКОВЬЕ
+				ul.s1__list 
+					li.s1__list-item #[span.lg-bold Круглый год] проводим смены
+					li.s1__list-item #[span.lg-bold Каждый день] тематические игры
+					li.s1__list-item #[span.lg-bold Авторские] программы смен
+				.s1__book
+					a.s1__btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle) Забронировать
+					.s1__book-text Забронируйте путёвку в лагерь
+				a.s1__play(href="#video60" data-uk-toggle)
+					.s1__play-text Форпост за 60 секунд
+					.s1__play-btn
+						img(src=`${assets}play-white.png` alt="")
+		section.s2#about
+			.container 
+				a.s2__play(href="#video60" data-uk-toggle)
+					.s2__play-btn
+						img.lazyload(src=ipl data-src=`${assets}play-dark.png` alt="")
+					.s2__play-text Форпост за 60 секунд
+				.s2__title А ПОЧЕМУ В ФОРПОСТ?
+				.s2__widget
+					.s2__tab
+						img(src=`${assets}slashes.svg` alt="").s2__tab-slashes.d-none.d-lg-block
+						ul.s2__slide-tab.uk-slider-items
+							li.s2__tab-item
+								a.s2__tab-link(href="#") Военные приключения
+							li.s2__tab-item
+								a.s2__tab-link(href="#") Мастер классы
+							li.s2__tab-item
+								a.s2__tab-link(href="#") Арсенал
+							li.s2__tab-item
+								a.s2__tab-link(href="#") Тематические смены
+							li.s2__tab-item
+								a.s2__tab-link(href="#") Не только “Армия”
+							li.s2__tab-item
+								a.s2__tab-link(href="#") Спорт
+							li.s2__tab-item
+								a.s2__tab-link(href="#") Награды
+					.s2__slide 
+						ul.s2__slide-items.uk-switcher
+							- for(var x = 1; x <= 7; x++)
+								li.s2__slide-content.s2__slide1
+									.s2__slide-title МАСШТАБНЫЕ ВОЕННЫЕ ИГРЫ
+									+picture(jpg, `${assets}s2-sl1-i1`, 'sl', 'l').s2__slide1-img-1
+									+picture(png, `${assets}s2-sl1-i2`, 'sl').s2__slide1-img-2
+									.s2__slide1-list
+										.s2__slide1-item Тематические большие игры на весь лагерь по&nbsp;авторским сценариям!
+										.s2__slide1-item Игры адаптированы под разные возраста
+										.s2__slide1-item Дети 10-12 лет играют со своими ровестниками. Дети постарше 13-16 лет - со своими.
+										.s2__slide1-item Современное игровое оружие.
+									a.s2__slide-btn(href="#") 
+										span Далее
+										+icon('triangle-next')
+							
+		section.s3#tour
+			+picture(png, `${assets}s3-bg`).s3__img-bg
+			+picture(png, `${assets}s3-transit1`).s3__img-transit1
+			+picture(png, `${assets}s3-transit2`).s3__img-transit2
+			.container 
+				.s3__title СМЕНЫ КРУГЛЫЙ ГОД
+				.s3__subtitle Для детей от 10 до 16 лет 
+				.s3__widget(data-active-index="1")
+					.s3__tab
+						button.s3__tab-dropbtn.uk-button(type="button") 
+							span Осенняя смена
+							+icon('angle-down')
+						ul.s3__slide-tab.s3__tab-drop.d-lg-none
+							li.s3__tab-item
+								a.s3__tab-link(href="#") Летняя смена
+							li.s3__tab-item
+								a.s3__tab-link(href="#") Осенняя смена
+							li.s3__tab-item
+								a.s3__tab-link(href="#") Зимняя смена
+							li.s3__tab-item
+								a.s3__tab-link(href="#") Весенняя смена
+						ul.s3__slide-tab.s3__tab-drop.d-none.d-lg-flex
+							li.s3__tab-item
+								a.s3__tab-link(href="#") Лето
+							li.s3__tab-item
+								a.s3__tab-link(href="#") Осень
+							li.s3__tab-item
+								a.s3__tab-link(href="#") Зима
+							li.s3__tab-item
+								a.s3__tab-link(href="#") Весна
+					.s3__slide 
+						ul.s3__slide-items.uk-switcher
+							li.s3__slide-content
+								.s3__block.s3__block--left
+									.s3__block-title БИТВА ЗА&nbsp;МОСКВУ
+									.s3__block-divider
+									.s3__block-text Военно-патриотический тур на осенних каникулах в детском лагере ФОРПОСТ.  Замечательные активные игры на свежем воздухе!  Ребята примут участие в историческом квесте, созданом по реальным событиям обороны столицы.. Игроки окажутся в 1941 году и смогут повлиять на ход военных действий, от которых зависит судьба всей страны! 
+									.s3__block-img.ibg 
+										+picture(jpg, `${assets}s3-i1`)
+									.s3__block-book.s3__block-book--available
+										.s3__block-cost Смена 14 дней от 30 000 рублей
+										.s3__block-range 3 февраля - 7 февраля
+										a.s3__block-btn.uk-button.btn-solid-primary(href="#") Узнать подробнее
+										.s3__block-access
+								.s3__block.s3__block--right
+									.s3__block-title МОРСКАЯ ПЕХОТА
+									.s3__block-divider
+									.s3__block-text Морская пехота была и остается символом воинской славы, мужества и отваги. Главные задачи морской пехоты: «В наступлении с моря они должны завоевывать береговые плацдармы и удерживать до подхода главных сил, а в обороне — защищать пункты базирования кораблей с сухопутных направлений». Именно этим мы и будем заниматьсяв военно-спортивном лагере «Форпост» осенью
+									.s3__block-img.ibg 
+										+picture(jpg, `${assets}s3-i2`)
+									.s3__block-book.s3__block-book--banned
+										.s3__block-cost nothing here
+										.s3__block-range nothing here
+										a.s3__block-btn.uk-button.btn-solid-primary(href="#") Узнать подробнее
+										.s3__block-access
+							li.s3__slide-content
+								.s3__block.s3__block--left
+									.s3__block-title БИТВА ЗА&nbsp;МОСКВУ
+									.s3__block-divider
+									.s3__block-text Военно-патриотический тур на осенних каникулах в детском лагере ФОРПОСТ.  Замечательные активные игры на свежем воздухе!  Ребята примут участие в историческом квесте, созданом по реальным событиям обороны столицы.. Игроки окажутся в 1941 году и смогут повлиять на ход военных действий, от которых зависит судьба всей страны! 
+									.s3__block-img.ibg 
+										+picture(jpg, `${assets}s3-i1`)
+									.s3__block-book.s3__block-book--banned
+										.s3__block-cost Смена 14 дней от 30 000 рублей
+										.s3__block-range 3 февраля - 7 февраля
+										a.s3__block-btn.uk-button.btn-solid-primary(href="#") Узнать подробнее
+										.s3__block-access
+								.s3__block.s3__block--right
+									.s3__block-title МОРСКАЯ ПЕХОТА
+									.s3__block-divider
+									.s3__block-text Морская пехота была и остается символом воинской славы, мужества и отваги. Главные задачи морской пехоты: «В наступлении с моря они должны завоевывать береговые плацдармы и удерживать до подхода главных сил, а в обороне — защищать пункты базирования кораблей с сухопутных направлений». Именно этим мы и будем заниматьсяв военно-спортивном лагере «Форпост» осенью
+									.s3__block-img.ibg 
+										+picture(jpg, `${assets}s3-i2`)
+									.s3__block-book.s3__block-book--available
+										.s3__block-cost Lorem
+										.s3__block-range Lorem
+										a.s3__block-btn.uk-button.btn-solid-primary(href="#") Узнать подробнее
+										.s3__block-access
+							li.s3__slide-content
+								.s3__block.s3__block--left
+									.s3__block-title МОРСКАЯ ПЕХОТА
+									.s3__block-divider
+									.s3__block-text Морская пехота была и остается символом воинской славы, мужества и отваги. Главные задачи морской пехоты: «В наступлении с моря они должны завоевывать береговые плацдармы и удерживать до подхода главных сил, а в обороне — защищать пункты базирования кораблей с сухопутных направлений». Именно этим мы и будем заниматьсяв военно-спортивном лагере «Форпост» осенью
+									.s3__block-img.ibg 
+										+picture(jpg, `${assets}s3-i2`)
+									.s3__block-book.s3__block-book--banned
+										.s3__block-cost Lorem
+										.s3__block-range Lorem
+										a.s3__block-btn.uk-button.btn-solid-primary(href="#") Узнать подробнее
+										.s3__block-access
+							li.s3__slide-content
+								.s3__block.s3__block--right
+									.s3__block-title БИТВА ЗА&nbsp;МОСКВУ
+									.s3__block-divider
+									.s3__block-text Военно-патриотический тур на осенних каникулах в детском лагере ФОРПОСТ.  Замечательные активные игры на свежем воздухе!  Ребята примут участие в историческом квесте, созданом по реальным событиям обороны столицы.. Игроки окажутся в 1941 году и смогут повлиять на ход военных действий, от которых зависит судьба всей страны! 
+									.s3__block-img.ibg 
+										+picture(jpg, `${assets}s3-i1`)
+									.s3__block-book.s3__block-book--available
+										.s3__block-cost Смена 14 дней от 30 000 рублей
+										.s3__block-range 3 февраля - 7 февраля
+										a.s3__block-btn.uk-button.btn-solid-primary(href="#") Узнать подробнее
+										.s3__block-access
+		section.s4#accommodation
+			.container 
+				.s4__widget
+					.s4__tab
+						ul.s4__slide-tab.uk-slider-items
+							li.s4__tab-item
+								a.s4__tab-link(href="#") БЕЗОПАСНОСТЬ
+							li.s4__tab-item
+								a.s4__tab-link(href="#") ЗДОРОВЬЕ
+							li.s4__tab-item
+								a.s4__tab-link(href="#") ПИТАНИЕ
+							li.s4__tab-item
+								a.s4__tab-link(href="#") ПРОЖИВАНИЕ
+					.s4__slide 
+						ul.s4__slide-items.uk-switcher
+							- for(var x = 1; x <= 4; x++)
+								li.s4__slide-content.s4__slide1
+									+picture(png, `${assets}s4-mouse`, 'n').s4__slide1-img1
+									+picture(png, `${assets}s4-camera`, 'sl', 'l').s4__slide1-img2
+									+picture(jpg, `${assets}s4-sl1-bg`).s4__slide1-img3
+									.s4__slide-title Мышь не проскочит
+									.s4__slide-list.s4__list
+										.s4__list-title Периметр
+										.s4__list-item Детский лагерь огорожен и&nbsp;охраняется
+										.s4__list-item Контрольно-пропускной режим обеспечивает ЧОП
+									.s4__slide-list.s4__list
+										.s4__list-title Территория
+										.s4__list-item Система#[br.d-lg-none] видеонаблюдения
+										.s4__list-item Перед заездами#[br.d-none.d-lg-inline] обрататывается от клещей
+									.s4__slide-list.s4__list.s4__slide-list--last
+										.s4__list-title Корпуса
+										.s4__list-item Оснащены пожарной сигнализацией
+										.s4__list-item Система звукового тревожного оповещения
+										.s4__list-item Видеокамеры на каждом#[br.d-lg-none] этаже
+
+									a.s4__slide-btn(href="#") 
+										span Далее
+										+icon('triangle-next')
+		section.s5#news
+			.container 
+				+picture(png, `${assets}s5-base`, 'n', 'n').s5__img-base
+				.s5__title Что у нас нового?
+				.s5__widget 
+					.s5__tab
+						button.s5__tab-dropbtn(type="button") 
+							div
+								.date 8.10.2020
+								.descr Открыты продажи на зиму
+							+icon('angle-down')
+						ul.s5__slide-tab.s5__tab-drop
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 8.10.2020
+									.descr Открыты продажи на зиму
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 17.08.2020
+									.descr Фото со сплава медведица
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 10.08.2020
+									.descr Завершился поход по р. Угра
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 03.08.2020
+									.descr Завершился поход по р. Нерль
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 29.07.2020
+									.descr Сплав “Медведица” стартует по графику
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 29.07.2020
+									.descr Сплав “Медведица” стартует по графику
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 29.07.2020
+									.descr Сплав “Медведица” стартует по графику
+							
+					.s5__slide 
+						ul.s5__slide-items.uk-switcher
+							- for (var x = 1; x <= 7; x++)
+								li.s5__slide-content
+									.s5__slide-descr Открыта продажа путёвок на зимние программы нa&nbsp;школьных каникулах 2020-2021
+									.s5__slide-photos
+										.s5__slide-photo.ibg
+											+picture(jpg, `${assets}s3-i1`)
+										.s5__slide-photo.ibg
+											+picture(jpg, `${assets}s3-i1`)
+									a.s5__slide-btn.uk-button.btn-solid-primary(href="#") Узнать больше
+
+		section.s6 
+			.s6__ibg.ibg
+				+picture(png, `${assets}s6-bg`).s6__img-bg
+			+picture(png, `${assets}s3-transit1`).s6__img-transit1
+			+picture(png, `${assets}s3-transit2`).s6__img-transit2
+			.container 
+				.s6__title НАША КОМАНДА
+				.s6__slider(data-uk-slider)
+					.s6__slider-nav
+						a.s6__slider-arrow.slidenav.slidenav-prev(href="#" data-uk-slider-item="previous")
+							+icon('arrow-left', 'white')
+						a.s6__slider-arrow.slidenav.slidenav-next(href="#" data-uk-slider-item="next")
+							+icon('arrow-right', 'white')
+					.uk-slider-container 
+						ul.uk-slider-items 
+							- for(var x = 1; x <= 6; x++)
+								li.s6__slider-item
+									.flipper
+										.front.s6__slider-img.ibg 
+											+picture(jpg, `${assets}s6-face`, 'n')
+										.back.s6__slider-text
+											.s6__slider-name Имя Фамилия
+											.s6__slider-descr Пару строк о заслугах человека перед лагерем Пару строк о&nbsp;заслугах человека перед лагерем Пару строк о&nbsp;заслугах человека перед лагерем
+		section.s7
+			.container 
+				+picture(png, `${assets}s7-man`).s7__img-man
+				+picture(png, `${assets}s7-radio`).s7__img-radio
+				.s7__title ОТЗЫВЫ
+				.s7__slider(data-uk-slider)
+					.s7__slider-nav
+						a.s7__slider-arrow.slidenav.slidenav-prev(href="#" data-uk-slider-item="previous")
+							+icon('arrow-left-big', '#298000')
+						a.s7__slider-arrow.slidenav.slidenav-next(href="#" data-uk-slider-item="next")
+							+icon('arrow-right-big', '#298000')
+					.uk-slider-container 
+						ul.uk-slider-items 
+							- for(var x = 1; x <= 9; x++)
+								li.s7__slider-item
+									.s7__slider-block 
+										.s7__slider-date 8 ноября 2020 г.
+										.s7__slider-title 
+											img.d-none.d-lg-block(src=`${assets}s7-gradient.svg` alt="")
+											span ФОРПОСТ - осенняя смена “Битва за Москву”
+										.s7__slider-name #[span.d-lg-none Барашкова М.В.]#[span.d-none.d-lg-inline Барашкова Мария Владимировна]
+										.s7__slider-text Ребёнок отдохнул и набрался массой впечатлений от проведённых сражений, мастер-классов. Понравилось сыну то, что вместо привычного меню столовых - предложен “шведский стол”. Общения с сотрудниками было не долгое, но впечатление осталось хорошее. Во время смены можно было посмотреть фотографии жизни детей в лагере. Спасибо персоналу и сотрудникам лагеря за замечательно проведённые 3 дня каникул
+										a.s7__slider-link(href="#") vk.com/barashkovamaria123
+					ul.s7__slider-dots.uk-slider-nav.uk-dotnav.slidedots
+		section.s8 
+			.container 
+				.s8__title РАБОТАЕМ ПО ЗАКОНУ
+				.s8__slider(data-uk-slider)
+					.s8__slider-nav
+						a.s8__slider-arrow.slidenav.slidenav-prev(href="#" data-uk-slider-item="previous")
+							+icon('angle-left')
+						a.s8__slider-arrow.slidenav.slidenav-next(href="#" data-uk-slider-item="next")
+							+icon('angle-right')
+					.uk-slider-container 
+						ul.s8__slider-items.uk-slider-items 
+							li.s8__slider-item
+								.s8__slider-content(class=`s8__slider-content--1`)
+									+picture(png, `${assets}s8-i1`, 'n').s8__slider-img 
+									svg.s8__slider-circle(width='188' height='34' viewbox='0 0 188 34' fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")
+										line(y1='15.6627' x2='188' y2='15.6627' stroke='white' stroke-width='2')
+										circle(cx='93.2626' cy='17.0314' r='15.5882' fill='#216900' stroke='white' stroke-width='2')
+									.s8__slider-num 1
+									.s8__slider-descr Мы в реестре детских лагерей Московской области
+							li.s8__slider-item
+								.s8__slider-content(class=`s8__slider-content--2`)
+									+picture(png, `${assets}s8-i2`, 'n').s8__slider-img 
+									svg.s8__slider-circle(width='188' height='34' viewbox='0 0 188 34' fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")
+										line(y1='15.6627' x2='188' y2='15.6627' stroke='white' stroke-width='2')
+										circle(cx='93.2626' cy='17.0314' r='15.5882' fill='#216900' stroke='white' stroke-width='2')
+									.s8__slider-num 2
+									.s8__slider-descr Мы в Федеральном реестре туроператоров
+							li.s8__slider-item
+								.s8__slider-content(class=`s8__slider-content--3`)
+									+picture(png, `${assets}s8-i3`, 'n').s8__slider-img 
+									svg.s8__slider-circle(width='188' height='34' viewbox='0 0 188 34' fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")
+										line(y1='15.6627' x2='188' y2='15.6627' stroke='white' stroke-width='2')
+										circle(cx='93.2626' cy='17.0314' r='15.5882' fill='#216900' stroke='white' stroke-width='2')
+									.s8__slider-num 3
+									.s8__slider-descr Работаем с сертификатами и компенсациями Москвы и МО
+		section.s9#contacts
+			.s9__ibg.ibg
+				+picture(png, `${assets}s9-bg`)
+			+picture(png, `${assets}s3-transit1`).s9__img-transit1
+			.container 
+				.s9__title КОНТАКТЫ
+				.s9__contacts 
+					.s9__contacts-phone.s9__contacts-item
+						+picture(png, `${assets}icon-phone`, 'n')
+						.s9__contacts-set 
+							a(href="tel:84957659016") 8 (495) 765-90-16
+							a(href="tel:89661314129") 8 (966) 131-41-29
+					.s9__contacts-time.s9__contacts-item
+						+picture(png, `${assets}icon-clock`, 'n')
+						.s9__contacts-set 
+							span пн-чт - с 9.00 до 18.00;
+							span пт - с 9.00 до 17.00;
+							span сб-вс - выходной;
+							span Обед с 12.30 - 13.30
+					.s9__contacts-pin.s9__contacts-item
+						+picture(png, `${assets}icon-pin`, 'n')
+						.s9__contacts-set 
+							span Московская обл., г. Мытищи, ул.Колонцова, д.5, оф.318 (3-й этаж)
+					.s9__contacts-mail.s9__contacts-item
+						+picture(png, `${assets}icon-mail`, 'n')
+						.s9__contacts-set 
+							span E-mail: info@vlageredu.ru
+				.s9__map
+					.s9__map-downloading
+						.loadingio-spinner-rolling-hz3sd853mcv
+							.ldio-ekx347c8429
+								div
+					.s9__map-script
+				.s9__title ОСТАЛИСЬ ВОПРОСЫ?
+				.s9__subtitle Заполните форму ниже и мы мигом перезвоним
+				form.form(action="#")
+					.form__input-wrap.input-wrap 
+						input.form__input.input(type="text" name="Имя" placeholder="ВАШЕ ИМЯ")
+					.form__input-wrap.input-wrap 
+						input.form__input.input.phone(type="tel" name="Телефон" placeholder="ВАШ ТЕЛЕФОН")
+					.form__submit 
+						button.form__btn.uk-button.btn-solid-primary ЗАКАЗАТЬ ЗВОНОК
+						.form__agr 
+							a(href="#" target="_blank") Даю согласие на обработку персональных данных

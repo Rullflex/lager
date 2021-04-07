@@ -1,0 +1,10 @@
+@import "./elements/buttons";
+@import "./elements/input";
+@import "./elements/slider";
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

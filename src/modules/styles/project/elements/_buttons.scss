@@ -1,0 +1,116 @@
+.uk-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: $transition--hover;
+}
+
+.btn {
+    &-solid {
+        &-wrap {
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                position: relative;
+                padding-bottom: 3px;
+            }
+        }
+        @mixin btn-solid($btn-color, $font-color) {
+            width: 18.125rem;
+            height: 4rem;
+            line-height: 4rem;
+
+            background: $btn-color;
+            border-radius: 0.4375rem;
+
+            color: $font-color;
+            font-weight: bold;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+
+            position: relative;
+            z-index: 2;
+            
+            &:active {}
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                width: 279px;
+                height: 71px;
+                line-height: 71px;
+
+                font-size: 17px;
+                &:hover {
+                }
+                &:focus {
+                }
+            }
+        }
+        @mixin btn-solid-sub($bg) {
+            width: 18.125rem;
+            height: 4rem;
+            border-radius: 0.4375rem;
+
+            background: $bg;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                width: 279px;
+                height: 71px;
+            }
+        }
+        &-optional {
+            @include btn-solid(null,  white);
+            background: linear-gradient(180deg, #45D700 0%, #216900 100%);
+            &:hover {
+                transform: translateY(3px)
+            }
+            &:focus {
+                transform: translateY(3px)
+            }   
+            &-sub {
+                @include btn-solid-sub(#133D00);
+            }
+        }
+        &-primary {
+            @include btn-solid(null,  white);
+            background-image: linear-gradient(180deg, rgba(69,215,0,1) 0%, rgba(33,105,0,1) 50%, rgba(20,63,0,1) 100%);
+            background-size: 100% 200%;
+            background-position-y: top;
+            &:active {
+                background-position-y: bottom;
+            }  
+            &-sub {
+                @include btn-solid-sub(#133D00);
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                box-shadow: 0 3px 0 0 #133D00;
+                &:hover {
+                    background-position-y: bottom;
+                }
+                &:focus {
+                    background-position-y: bottom;
+                } 
+            }
+        }
+    }
+    &-outline {
+        @mixin btn-outline($btn-color, $font-color) {
+            border: 0.0625rem solid $btn-color;
+            background: transparent;
+            border-radius: 0.4375rem;
+
+            color: $font-color;
+            font-weight: bold;
+            &:active {
+                background: $btn-color;
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    background: $btn-color;
+                }
+            }
+        }
+        &-primary {
+            @include btn-outline(#45D700, white);
+        }
+    }
+}

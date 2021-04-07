@@ -1,0 +1,48 @@
+.input {
+    $self: &;
+    display: block;
+    border-width: 0.0625rem;
+    border-style: solid;
+    border-color: transparent;
+    transition: $transition--normal;
+
+    width: 18.125rem;
+    height: 3.4375rem;
+    
+    background: #FFFFFF;
+    border-radius: 0.4375rem;
+
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-align: center;
+    &:focus {
+        border-color: $dark;
+    }
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        width: 373px;
+        height: 93px;
+        // width: 264px;
+        // height: 54px;
+        font-size: 1.0625rem;
+        // font-size: 0.75rem;
+        text-align: left;
+        padding-left: 30px;
+        // padding-left: 17px;
+    }
+    &-wrap {
+        &.has-error {
+            #{$self} {
+                border-color: $danger !important;
+                // box-shadow: 0px 0px 0.5rem 0.1875rem rgba($danger, 0.19);
+                color: $danger;
+            }
+        }
+        &.has-success {
+            #{$self} {
+                border-color: $success !important;
+                // box-shadow: 0px 0px 0.5rem 0.1875rem rgba($success, 0.19);
+                color: $success;
+            }
+        }
+    }
+}

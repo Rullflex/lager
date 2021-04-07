@@ -1,0 +1,14 @@
++popup(id="callback")
+    .popup__ibg.ibg
+        +picture(jpg, `${assets}callback-bg`, 'n')
+    .popup__title #[span.text-green Заполните форму] и мы#[br] мигом перезвоним
+    form.form(action="#")
+        input(type="hidden" name="Контекст" value="Модальное окно 'Заказать звонок'")
+        .form__input-wrap.input-wrap 
+            input.form__input.input(type="text" name="Имя" placeholder="ИМЯ")
+        .form__input-wrap.input-wrap 
+            input.form__input.input.phone(type="tel" name="Телефон" placeholder="ТЕЛЕФОН")
+        .form__submit 
+            button.form__btn.uk-button.btn-solid-primary ЖДУ ЗВОНКА
+            .form__agr 
+                a(href="#" target="_blank") Даю согласие на обработку персональных данных

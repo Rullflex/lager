@@ -1,0 +1,46 @@
+@import "./widgets/header";
+@import "./widgets/footer";
+@import "./widgets/popup-base";
+@import "./widgets/popups";
+.form {
+    &__input {
+        &-wrap {
+            margin-bottom: 0.5625rem;
+        }
+    }
+    &__submit {
+
+    }
+    &__btn {
+        margin: 0.75rem auto 0.2rem;
+        line-height: 3.3125rem;
+        height: 3.3125rem;
+    }
+    &__agr {
+        font-size: 0.625rem;
+        text-align: center;
+        text-decoration-line: underline;
+        
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .form {
+        &__input {
+            &-wrap {
+            }
+        }
+        &__submit {
+            @include flex-column();
+        }
+        &__btn {
+            line-height: 90px;
+            height: 90px;
+            width: 373px;
+            margin: 0 0 17px;
+        }
+        &__agr {
+            font-size: 17px;
+            width: 268px;
+        }
+    }
+}
