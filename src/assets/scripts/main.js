@@ -11,9 +11,45 @@ document.addEventListener(`DOMContentLoaded`, function () {
     
     if (window.innerWidth < app.lg) {
         UIkit.slider(`.s2__tab`)
-    } else {
-        UIkit.slider(`.s2__tab`, {
-            center: true,
+    }
+    let tabReorder = () => {
+        const set = document.querySelectorAll(`.s2__tab .s2__tab-item`)
+        const length = set.length
+        const center = Math.floor(length / 2)
+        const currentActiveIndex = app.getIndexOfElements(document.querySelector(`.s2__tab .s2__tab-item.switcher-active`), set)
+        let startIndex = length - (currentActiveIndex - center)
+        if (startIndex >= length) {
+            startIndex = startIndex - length
+        }
+        set.forEach(function (e, idx) {
+            let i = idx + startIndex
+            if (i >= length) {
+                i -= length
+            }
+            e.classList.remove('center')
+            e.style.order = i
+            switch (i) {
+                case 0:
+                case 6:
+                    e.style.fontSize = '20px'
+                    e.style.opacity = '0.3'
+                    break;
+                case 1:
+                case 5:
+                    e.style.fontSize = '22px'
+                    e.style.opacity = '0.5'
+                    break;
+                case 2:
+                case 4:
+                    e.style.fontSize = '24px'
+                    e.style.opacity = '1'
+                    break;
+                default:
+                    e.style.fontSize = '26px'
+                    e.style.opacity = '1'
+                    e.classList.add('center')
+                    break;
+            }
         })
     }
     UIkit.switcher(`.s2__slide-tab`, {
@@ -32,7 +68,11 @@ document.addEventListener(`DOMContentLoaded`, function () {
     document.querySelectorAll(`li.s2__slide-content`).forEach((el, idx) => {
         el.addEventListener(`beforeshow`, (event) => {
             const idx = app.getIndexOfElements(event.target, event.target.parentElement.children)
-            UIkit.slider(`.s2__tab`).show(idx)
+            if (window.innerWidth < app.lg) {
+                UIkit.slider(`.s2__tab`).show(idx)
+            } else {
+                tabReorder()
+            }
         })
     })
     // END SECTION 2

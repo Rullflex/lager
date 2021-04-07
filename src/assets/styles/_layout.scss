@@ -506,7 +506,7 @@
         }
         &__widget { }
         &__tab {
-            // width: 1750px;
+            width: 1750px;
             @include center-item-x('relative');
             padding: 30px 0;
             margin-bottom: 3rem;
@@ -522,6 +522,18 @@
                 margin-right: 0;
                 &.switcher-active {
                     .s2__tab-link {
+                        width: 160px;
+                        height: unset;
+
+                        background: transparent;
+                        box-shadow: unset;
+
+                        font-size: inherit;
+                        color: inherit;
+                    }
+                }
+                &.center {
+                    .s2__tab-link {
                         width: 373px;
                         height: 62px;
 
@@ -530,6 +542,7 @@
 
                         font-size: 26px;
                         font-weight: bold;
+                        color: #FFF500;
                     }
                 }
             }
@@ -542,7 +555,7 @@
                 border-radius: unset;
     
                 font-weight: 500;
-                font-size: 22px;
+                font-size: inherit;
                 text-align: center;
             }
         }

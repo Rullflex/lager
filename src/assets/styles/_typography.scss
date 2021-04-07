@@ -11,3 +11,10 @@ $relative-link-to-modules: "../fonts";
 @include font-face("Montserrat", "Montserrat-Black", "900", "normal", $relative-link-to-modules);
 
 @include font-face("CGFArchReactorRUS", "CGFArchReactorRUS", "400", "normal", $relative-link-to-modules);
+// @font-face {
+//     font-family: "CGFArchReactorRUS";
+//     font-display: swap;
+//     src: url("../fonts/CGFArchReactorRUS.ttf") format("TrueType");
+//     font-weight: 400;
+//     font-style: normal;
+// }
