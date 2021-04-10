@@ -147,19 +147,123 @@ block content
 								a.s2__tab-link(href="#") Награды
 					.s2__slide 
 						ul.s2__slide-items.uk-switcher
-							- for(var x = 1; x <= 7; x++)
-								li.s2__slide-content.s2__slide1
-									.s2__slide-title МАСШТАБНЫЕ ВОЕННЫЕ ИГРЫ
-									+picture(jpg, `${assets}s2-sl1-i1`, 'sl', 'l').s2__slide1-img-1
-									+picture(png, `${assets}s2-sl1-i2`, 'sl').s2__slide1-img-2
-									.s2__slide1-list
-										.s2__slide1-item Тематические большие игры на весь лагерь по&nbsp;авторским сценариям!
-										.s2__slide1-item Игры адаптированы под разные возраста
-										.s2__slide1-item Дети 10-12 лет играют со своими ровестниками. Дети постарше 13-16 лет - со своими.
-										.s2__slide1-item Современное игровое оружие.
-									a.s2__slide-btn(href="#") 
-										span Далее
-										+icon('triangle-next')
+							li.s2__slide-content.s2__slide1
+								.s2__slide-title МАСШТАБНЫЕ ВОЕННЫЕ ИГРЫ
+								+picture(jpg, `${assets}s2-sl1-i1`, 'sl', 'l').s2__slide1-img-1
+								+picture(png, `${assets}s2-sl1-i2`, 'sl').s2__slide1-img-2
+								.s2__slide1-list
+									.s2__slide1-item Тематические большие игры на весь лагерь по&nbsp;авторским сценариям!
+									.s2__slide1-item Игры адаптированы под разные возраста
+									.s2__slide1-item Дети 10-12 лет играют со своими ровестниками. Дети постарше 13-16 лет - со своими.
+									.s2__slide1-item Современное игровое оружие.
+								a.s2__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s2__slide-content.s2__slide2
+								.s2__slide-title УЗНАЕМ МНОГО НОВОГО#[br.d-lg-none] И ПРОБУЕМ САМИ
+								.s2__slide2-num 1500
+								.s2__slide2-subnum КГ СПЕЦИАЛЬНОГО ОБОРУДОВАНИЯ РАЗНЫХ РОДОВ ВОЙСК ДЛЯ ДЕТЕЙ
+								.s2__slide2-list
+									.s2__slide2-item 
+										+picture(png, `${assets}sl2-west`)
+										span Бронижелеты#[br] и шлемы
+									.s2__slide2-item 
+										+picture(png, `${assets}sl2-pistol`)
+										span Пневматическое#[br] оружие
+									.s2__slide2-item 
+										+picture(png, `${assets}sl2-boat`)
+										span Водный десант
+									.s2__slide2-item 
+										+picture(png, `${assets}sl2-map`)
+										span Картография
+									.s2__slide2-item 
+										+picture(png, `${assets}sl2-radio`)
+										span Полевая связь
+									.s2__slide2-item 
+										+picture(png, `${assets}sl2-aim`)
+										span Стрельба холостыми
+								.d-none.d-lg-block 
+									.s2__slide-title Полоса препятствий
+									svg(width="43" height="85" viewBox="0 0 43 85" fill="none" xmlns="http://www.w3.org/2000/svg")
+										path(d="M35.1629 84.6821C34.7537 85.053 34.1213 85.0219 33.7504 84.6126L27.707 77.9435C27.3361 77.5343 27.3672 76.9019 27.7765 76.531C28.1857 76.1602 28.8181 76.1913 29.189 76.6006L34.5609 82.5286L40.489 77.1567C40.8983 76.7858 41.5307 76.8169 41.9015 77.2262C42.2724 77.6354 42.2412 78.2678 41.832 78.6387L35.1629 84.6821ZM0.105076 1.36494C15.636 -0.472137 25.892 1.97652 32.4007 7.37374C38.9147 12.7754 41.4462 20.9403 41.9712 29.9928C42.4963 39.046 41.0254 49.1653 39.3605 58.6798C37.6848 68.2559 35.8263 77.1619 35.4902 83.9903L33.4926 83.892C33.8368 76.8994 35.7366 67.7859 37.3904 58.335C39.055 48.8225 40.4848 38.9071 39.9746 30.1086C39.4642 21.3097 37.0244 13.8061 31.124 8.91329C25.2183 4.01601 15.6168 1.54407 0.340008 3.35109L0.105076 1.36494Z" fill="#162712")
+									+picture(jpg, `${assets}sl2-plan`, 'n')
+								a.s2__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s2__slide-content.s2__slide3
+								+picture(jpg, `${assets}sl3-i1`, 'sl').s2__slide3-img-1
+								+picture(png, `${assets}sl3-i2`).s2__slide3-img-2
+								+picture(png, `${assets}sl3-i3`).s2__slide3-img-3
+								+picture(png, `${assets}sl3-i4`, 'n').s2__slide3-img-4
+								.s2__slide3-num 110
+								.s2__slide3-subnum КОМПЛЕКТОВ ДЛЯ#[br] ИГРЫ В ЛАЗЕРТАГ ИЗ#[br] 14 ВИДОВ ОРУЖИЯ
+								a.s2__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s2__slide-content.s2__slide4
+								+picture(jpg, `${assets}sl4-bg`, 'sl').s2__slide4-img
+								.s2__slide-title ИСТОРИЧЕСКИЕ СМЕНЫ
+								.s2__slide-subtitle Только у нас: тематические смены по мотивам исторических событий
+								.s2__slide4-list
+									.s2__slide4-item Блицкриг
+									.s2__slide4-item Партизаны
+									.s2__slide4-item Битва за Москву
+									.s2__slide4-item Тайна генерала
+								a.s2__slide4-btn.uk-button.btn-solid-primary(href="#tour" data-uk-scroll) УЗНАТЬ ПОДРОБНЕЕ
+								a.s2__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s2__slide-content.s2__slide5
+								.s2__slide-title А ЕЩЕ У НАС
+								.s2__slide5-list
+									.s2__slide5-item Интеллектуальные вечера
+									.s2__slide5-item Посиделки с песнями у костра
+									.s2__slide5-item Бассейн
+									.s2__slide5-item Турниры
+									.s2__slide5-item КВН
+									.s2__slide5-item и многое другое
+								.s2__slide5-slider(data-uk-slider)
+									ul.uk-slider-items 	
+										li
+											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
+										li
+											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
+										li
+											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
+								.s2__slide-subtitle В лагере мы играем в “армию”, взяв из нее самое ценное и интересное для детей
+								a.s2__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s2__slide-content.s2__slide6
+								.s2__slide-title ЗДОРОВЫЙ РЕЖИМ И#[br] АКТИВНЫЕ ИГРЫ
+								.s2__slide6-list
+									.s2__slide6-item Зарницы
+									.s2__slide6-item Спортивные&nbsp;площадки
+									.s2__slide6-item Футбол
+									.s2__slide6-item Баскетбол
+									.s2__slide6-item Волейбол
+								.s2__slide6-slider(data-uk-slider)
+									ul.uk-slider-items 	
+										li
+											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
+										li
+											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
+										li
+											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
+								a.s2__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s2__slide-content.s2__slide7
+								+picture(jpg, `${assets}sl7-i1`).s2__slide7-img-1
+								+picture(jpg, `${assets}sl7-i2`).s2__slide7-img-2
+								.s2__slide-title ЭКСКЛЮЗИВНЫЕ НАГРАДЫ
+								.s2__slide7-list
+									.s2__slide7-item Мы сделали специальную коллекцию наградных медалей-значков
+									.s2__slide7-item По итогам смены нашим курсантам вручаются заслуженные медали
+									.s2__slide7-item Их нельзя купить, их можно заслужить или выиграть
+								a.s2__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
 							
 		section.s3#tour
 			+picture(png, `${assets}s3-bg`).s3__img-bg

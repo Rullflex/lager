@@ -63,7 +63,7 @@
             &:hover {
                 transform: translateY(3px)
             }
-            &:focus {
+            &:focus-visible {
                 transform: translateY(3px)
             }   
             &-sub {
@@ -86,7 +86,7 @@
                 &:hover {
                     background-position-y: bottom;
                 }
-                &:focus {
+                &:focus-visible {
                     background-position-y: bottom;
                 } 
             }
