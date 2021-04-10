@@ -164,29 +164,33 @@ block content
 								.s2__slide2-num 1500
 								.s2__slide2-subnum КГ СПЕЦИАЛЬНОГО ОБОРУДОВАНИЯ РАЗНЫХ РОДОВ ВОЙСК ДЛЯ ДЕТЕЙ
 								.s2__slide2-list
-									.s2__slide2-item 
-										+picture(png, `${assets}sl2-west`)
-										span Бронижелеты#[br] и шлемы
-									.s2__slide2-item 
-										+picture(png, `${assets}sl2-pistol`)
-										span Пневматическое#[br] оружие
-									.s2__slide2-item 
-										+picture(png, `${assets}sl2-boat`)
-										span Водный десант
-									.s2__slide2-item 
-										+picture(png, `${assets}sl2-map`)
-										span Картография
-									.s2__slide2-item 
-										+picture(png, `${assets}sl2-radio`)
-										span Полевая связь
-									.s2__slide2-item 
-										+picture(png, `${assets}sl2-aim`)
-										span Стрельба холостыми
+									.s2-slide-item-1group
+										.s2__slide2-item 
+											+picture(png, `${assets}sl2-west`)
+											span Бронижелеты#[br] и шлемы
+										.s2__slide2-item 
+											+picture(png, `${assets}sl2-pistol`)
+											span Пневматическое#[br] оружие
+									.s2-slide-item-2group
+										.s2__slide2-item 
+											+picture(png, `${assets}sl2-boat`)
+											span Водный десант
+										.s2__slide2-item 
+											+picture(png, `${assets}sl2-map`)
+											span Картография
+									.s2-slide-item-3group
+										.s2__slide2-item 
+											+picture(png, `${assets}sl2-radio`)
+											span Полевая связь
+										.s2__slide2-item 
+											+picture(png, `${assets}sl2-aim`)
+											span Стрельба холостыми
 								.d-none.d-lg-block 
 									.s2__slide-title Полоса препятствий
-									svg(width="43" height="85" viewBox="0 0 43 85" fill="none" xmlns="http://www.w3.org/2000/svg")
+									svg(width="43" height="85" viewBox="0 0 43 85" fill="none" xmlns="http://www.w3.org/2000/svg").s2__slide-title-svg
 										path(d="M35.1629 84.6821C34.7537 85.053 34.1213 85.0219 33.7504 84.6126L27.707 77.9435C27.3361 77.5343 27.3672 76.9019 27.7765 76.531C28.1857 76.1602 28.8181 76.1913 29.189 76.6006L34.5609 82.5286L40.489 77.1567C40.8983 76.7858 41.5307 76.8169 41.9015 77.2262C42.2724 77.6354 42.2412 78.2678 41.832 78.6387L35.1629 84.6821ZM0.105076 1.36494C15.636 -0.472137 25.892 1.97652 32.4007 7.37374C38.9147 12.7754 41.4462 20.9403 41.9712 29.9928C42.4963 39.046 41.0254 49.1653 39.3605 58.6798C37.6848 68.2559 35.8263 77.1619 35.4902 83.9903L33.4926 83.892C33.8368 76.8994 35.7366 67.7859 37.3904 58.335C39.055 48.8225 40.4848 38.9071 39.9746 30.1086C39.4642 21.3097 37.0244 13.8061 31.124 8.91329C25.2183 4.01601 15.6168 1.54407 0.340008 3.35109L0.105076 1.36494Z" fill="#162712")
-									+picture(jpg, `${assets}sl2-plan`, 'n')
+									+picture(jpg, `${assets}sl2-plan`, 'l')
+									.s2__slide-picure-desc Каждый опробует 200 метровую полосу препятствий из 13 элементов, сделанную специально для детей.
 								a.s2__slide-btn(href="#") 
 									span Далее
 									+icon('triangle-next')

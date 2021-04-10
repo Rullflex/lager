@@ -868,11 +868,13 @@
             &-num {
                 font-size: 150px;
                 @include center-item-x();
+                margin-top: 251px;
             }
             &-subnum {
                 font-size: 30px;
                 line-height: 35px;
                 @include center-item-x();
+                margin-top: 451px;
             }
             &-list {
                display: flex;
@@ -883,16 +885,68 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                width: 8.25rem;
+                width: 250px;
+                font-family: Montserrat;
+                font-size: 26px;
+                font-style: normal;
                 font-weight: 500;
-                font-size: 0.6875rem;
-                line-height: 0.9375rem;
+                line-height: 35px;
+                text-align: center;
+                letter-spacing: 0em;
                 margin-bottom: 2rem;
                 img {
                     margin-bottom: 0.5rem;
                 }
+                span {
+                    text-align: center;
+                    width: 250px;
+                }
+            }
+            .s2-slide-item-1group {
+                margin: 0 auto;
+                margin-top: 130px;
+                width: 900px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .s2-slide-item-2group {
+                margin: 0 auto;
+                margin-top: 110px;
+                width: 1200px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .s2-slide-item-3group {
+                margin: 0 auto;
+                margin-top: 160px;
+                width: 900px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .s2__slide-title {
+                margin-top: 130px;
+            }
+            .s2__slide-title-svg {
+                transform: translate(760px, -30px);
+            }
+            .s2__slide-picure-desc {
+                width: 859px;
+                font-family: Montserrat;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 35px;
+                letter-spacing: 0em;
+                text-align: center;
+                margin: 0 auto;
+                text-align: center;
+                margin-top: 42px;
             }
         }
+
+
+
         // SLIDE 3
         &3 {
             &-img {
