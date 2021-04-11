@@ -164,21 +164,18 @@ block content
 								.s2__slide2-num 1500
 								.s2__slide2-subnum КГ СПЕЦИАЛЬНОГО ОБОРУДОВАНИЯ РАЗНЫХ РОДОВ ВОЙСК ДЛЯ ДЕТЕЙ
 								.s2__slide2-list
-									.s2-slide-item-1group
 										.s2__slide2-item 
 											+picture(png, `${assets}sl2-west`)
 											span Бронижелеты#[br] и шлемы
 										.s2__slide2-item 
 											+picture(png, `${assets}sl2-pistol`)
 											span Пневматическое#[br] оружие
-									.s2-slide-item-2group
 										.s2__slide2-item 
 											+picture(png, `${assets}sl2-boat`)
 											span Водный десант
 										.s2__slide2-item 
 											+picture(png, `${assets}sl2-map`)
 											span Картография
-									.s2-slide-item-3group
 										.s2__slide2-item 
 											+picture(png, `${assets}sl2-radio`)
 											span Полевая связь
@@ -186,7 +183,7 @@ block content
 											+picture(png, `${assets}sl2-aim`)
 											span Стрельба холостыми
 								.d-none.d-lg-block 
-									.s2__slide-title Полоса препятствий
+									.s2__slide-title-last Полоса препятствий
 									svg(width="43" height="85" viewBox="0 0 43 85" fill="none" xmlns="http://www.w3.org/2000/svg").s2__slide-title-svg
 										path(d="M35.1629 84.6821C34.7537 85.053 34.1213 85.0219 33.7504 84.6126L27.707 77.9435C27.3361 77.5343 27.3672 76.9019 27.7765 76.531C28.1857 76.1602 28.8181 76.1913 29.189 76.6006L34.5609 82.5286L40.489 77.1567C40.8983 76.7858 41.5307 76.8169 41.9015 77.2262C42.2724 77.6354 42.2412 78.2678 41.832 78.6387L35.1629 84.6821ZM0.105076 1.36494C15.636 -0.472137 25.892 1.97652 32.4007 7.37374C38.9147 12.7754 41.4462 20.9403 41.9712 29.9928C42.4963 39.046 41.0254 49.1653 39.3605 58.6798C37.6848 68.2559 35.8263 77.1619 35.4902 83.9903L33.4926 83.892C33.8368 76.8994 35.7366 67.7859 37.3904 58.335C39.055 48.8225 40.4848 38.9071 39.9746 30.1086C39.4642 21.3097 37.0244 13.8061 31.124 8.91329C25.2183 4.01601 15.6168 1.54407 0.340008 3.35109L0.105076 1.36494Z" fill="#162712")
 									+picture(jpg, `${assets}sl2-plan`, 'l')
@@ -196,9 +193,11 @@ block content
 									+icon('triangle-next')
 							li.s2__slide-content.s2__slide3
 								+picture(jpg, `${assets}sl3-i1`, 'sl').s2__slide3-img-1
-								+picture(png, `${assets}sl3-i2`).s2__slide3-img-2
-								+picture(png, `${assets}sl3-i3`).s2__slide3-img-3
-								+picture(png, `${assets}sl3-i4`, 'n').s2__slide3-img-4
+								+picture(png, `${assets}sl3-i2`).s2__slide3-img-2(style="top: 600px; left: 700px;")
+								+picture(png, `${assets}sl3-i3`).s2__slide3-img-3(style="top: 100px; left: 1100px;")
+								+picture(png, `${assets}sl3-i4`)(style="position: absolute; top: 200px; left: 1000px;")
+								img(src="/assets/images/sl2__slide3-white.png").s2__slide3-img-white(style="position: absolute; width: 400px; height:800px;top: 40px; left: 100px;")
+								img(src="/assets/images/sl2__slide3-white2.png").s2__slide3-img-white2(style="position: absolute; top: 450px; left: -400px; width: 800px; height: 218px;")
 								.s2__slide3-num 110
 								.s2__slide3-subnum КОМПЛЕКТОВ ДЛЯ#[br] ИГРЫ В ЛАЗЕРТАГ ИЗ#[br] 14 ВИДОВ ОРУЖИЯ
 								a.s2__slide-btn(href="#") 
@@ -208,11 +207,24 @@ block content
 								+picture(jpg, `${assets}sl4-bg`, 'sl').s2__slide4-img
 								.s2__slide-title ИСТОРИЧЕСКИЕ СМЕНЫ
 								.s2__slide-subtitle Только у нас: тематические смены по мотивам исторических событий
+								img(src="/assets/images/sl3-bg.png").sl4-lg-bg
+								img(src="/assets/images/sl3-bg-white.png").sl4-lg-bg-white
+								
 								.s2__slide4-list
 									.s2__slide4-item Блицкриг
 									.s2__slide4-item Партизаны
 									.s2__slide4-item Битва за Москву
 									.s2__slide4-item Тайна генерала
+								img(src="/assets/images/sl3-tree1.png").sl4-lg-tree1
+								img(src="/assets/images/sl3-tree2.png").sl4-lg-tree2
+								img(src="/assets/images/sl3-tree3.png").sl4-lg-tree3
+								img(src="/assets/images/sl3-tree4.png").sl4-lg-tree4
+								img(src="/assets/images/sl3-plane.png").sl4-lg-plane
+								img(src="/assets/images/sl3-plane2.png").sl4-lg-plane2
+								img(src="/assets/images/sl3-plane3.png").sl4-lg-plane3
+								img(src="/assets/images/sl3-soldier.png").sl4-lg-soldier
+								img(src="/assets/images/sl3-bottom-white.png").sl4-lg-bottom-white
+								
 								a.s2__slide4-btn.uk-button.btn-solid-primary(href="#tour" data-uk-scroll) УЗНАТЬ ПОДРОБНЕЕ
 								a.s2__slide-btn(href="#") 
 									span Далее
@@ -226,14 +238,18 @@ block content
 									.s2__slide5-item Турниры
 									.s2__slide5-item КВН
 									.s2__slide5-item и многое другое
+								img(src="assets/images/sl5-guitar.png").sl5-guitar
+								img(src="assets/images/sl5-guitar-bottom.png").sl5-guitar-bottom
 								.s2__slide5-slider(data-uk-slider)
 									ul.uk-slider-items 	
 										li
-											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
+											img(src="/assets/images/sl5-slider-img.png")
 										li
-											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
+											img(src="/assets/images/sl5-slider-img.png")
 										li
-											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
+											img(src="/assets/images/sl5-slider-img.png")
+								img(src="/assets/images/slider-right-white.png").slider-right-white
+								img(src="/assets/images/slider-left-white.png").slider-left-white
 								.s2__slide-subtitle В лагере мы играем в “армию”, взяв из нее самое ценное и интересное для детей
 								a.s2__slide-btn(href="#") 
 									span Далее
@@ -249,17 +265,25 @@ block content
 								.s2__slide6-slider(data-uk-slider)
 									ul.uk-slider-items 	
 										li
-											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
+											img(src="/assets/images/sl6-slider-img.png")
 										li
-											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
+											img(src="/assets/images/sl6-slider-img.png")
 										li
-											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
+											img(src="/assets/images/sl6-slider-img.png")
+									a(href="#" data-uk-slider-item="previous")
+									.sl6-arrow-left
+										+icon('arrow-right')
+								img(src="/assets/images/slider-right-white.png").sl6-slider-right-white
+								img(src="/assets/images/slider-left-white.png").sl6-slider-left-white
+								img(src="/assets/images/sl6-ball.png").sl6-ball
+								img(src="/assets/images/sl6-training.png").sl6-train
 								a.s2__slide-btn(href="#") 
 									span Далее
 									+icon('triangle-next')
 							li.s2__slide-content.s2__slide7
 								+picture(jpg, `${assets}sl7-i1`).s2__slide7-img-1
 								+picture(jpg, `${assets}sl7-i2`).s2__slide7-img-2
+								img(src="/assets/images/sl7-bg.png")(style=" position: absolute; left: -400px;")
 								.s2__slide-title ЭКСКЛЮЗИВНЫЕ НАГРАДЫ
 								.s2__slide7-list
 									.s2__slide7-item Мы сделали специальную коллекцию наградных медалей-значков
