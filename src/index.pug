@@ -174,11 +174,11 @@ block content
 										+picture(png, `${assets}sl2-boat`)
 										span Водный десант
 									.s2__slide2-item 
-										+picture(png, `${assets}sl2-radio`)
-										span Полевая связь
-									.s2__slide2-item 
 										+picture(png, `${assets}sl2-map`)
 										span Картография
+									.s2__slide2-item 
+										+picture(png, `${assets}sl2-radio`)
+										span Полевая связь
 									.s2__slide2-item 
 										+picture(png, `${assets}sl2-aim`)
 										span Стрельба холостыми
@@ -186,16 +186,15 @@ block content
 									.s2__slide-title.s2_2nd-title Полоса препятствий
 									svg(width="43" height="85" viewBox="0 0 43 85" fill="none" xmlns="http://www.w3.org/2000/svg").sl2-arrow
 										path(d="M35.1629 84.6821C34.7537 85.053 34.1213 85.0219 33.7504 84.6126L27.707 77.9435C27.3361 77.5343 27.3672 76.9019 27.7765 76.531C28.1857 76.1602 28.8181 76.1913 29.189 76.6006L34.5609 82.5286L40.489 77.1567C40.8983 76.7858 41.5307 76.8169 41.9015 77.2262C42.2724 77.6354 42.2412 78.2678 41.832 78.6387L35.1629 84.6821ZM0.105076 1.36494C15.636 -0.472137 25.892 1.97652 32.4007 7.37374C38.9147 12.7754 41.4462 20.9403 41.9712 29.9928C42.4963 39.046 41.0254 49.1653 39.3605 58.6798C37.6848 68.2559 35.8263 77.1619 35.4902 83.9903L33.4926 83.892C33.8368 76.8994 35.7366 67.7859 37.3904 58.335C39.055 48.8225 40.4848 38.9071 39.9746 30.1086C39.4642 21.3097 37.0244 13.8061 31.124 8.91329C25.2183 4.01601 15.6168 1.54407 0.340008 3.35109L0.105076 1.36494Z" fill="#162712")
-									+picture(jpg, `${assets}sl2-plan`, 'sl').s2__slide2-plan
+									+picture(jpg, `${assets}sl2-plan`, 'n')
 									.s2__slide2-descr Каждый опробует 200 метровую полосу препятствий из 13 элементов, сделанную специально для детей.
 								a.s2__slide-btn(href="#") 
 									span Далее
 									+icon('triangle-next')
 							li.s2__slide-content.s2__slide3
 								+picture(jpg, `${assets}sl3-i1`, 'sl').s2__slide3-img-1
-								+picture(png, `${assets}sl3-i2`).s2__slide3-img-2
-								+picture(png, `${assets}sl3-i3`).s2__slide3-img-3
-								+picture(png, `${assets}sl3-i4`).s2__slide3-img-4
+								+picture(png, `${assets}sl3-i2`, 'n').s2__slide3-img-2
+								+picture(png, `${assets}sl3-i3`, 'n').s2__slide3-img-3
 								.s2__slide3-num 110
 								.s2__slide3-subnum КОМПЛЕКТОВ ДЛЯ#[br] ИГРЫ В ЛАЗЕРТАГ ИЗ#[br] 14 ВИДОВ ОРУЖИЯ
 								a.s2__slide-btn(href="#") 
@@ -215,9 +214,11 @@ block content
 									span Далее
 									+icon('triangle-next')
 							li.s2__slide-content.s2__slide5
-								.s2__slide-subtitle(style="line-height:0;") В лагере мы играем в “Армию”. 
-								.s2__slide-subtitle Взяв из нее самое ценное и интересное для детей
-								.s2__slide-subtitle А еще у нас на сменах:
+								+picture(jpg, `${assets}sl5-guitar`, 'n').s2__slide5-img-guitar.d-none.d-lg-block
+								.s2__slide-title.d-lg-none А ЕЩЕ У НАС
+								.s2__slide5-top-descr.d-none.d-lg-block
+									div В лагере мы играем в “Армию”.#[br] Взяв из неё самое ценное и интересное для детей
+									div А ещё у нас на сменах:
 								.s2__slide5-list
 									.s2__slide5-item Интеллектуальные вечера
 									.s2__slide5-item Посиделки с песнями у костра
@@ -225,57 +226,63 @@ block content
 									.s2__slide5-item Турниры
 									.s2__slide5-item КВН
 									.s2__slide5-item и многое другое
-								.d-none.d-lg-block
-									img(src="/assets/images/sl5-guitar.png").sl5-guitar
 								.s2__slide5-slider(data-uk-slider)
+									+picture(png, `${assets}s2-slider-grange-top`, 'n').s2__slide5-grange-top
+									+picture(png, `${assets}s2-slider-grange-bot`, 'n').s2__slide5-grange-bot
+									+picture(png, `${assets}s2-slider-grange-left`, 'n').s2__slide5-grange-left
+									+picture(png, `${assets}s2-slider-grange-right`, 'n').s2__slide5-grange-right
 									ul.uk-slider-items
-										li
-											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
-										li
-											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
-										li
-											+picture(jpg, `${assets}sl5-i1`, 'sl').s2__slide5-img
-									.d-none.d-lg-block 
+										li.ibg
+											+picture(jpg, `${assets}sl5-i`, 'n').s2__slide5-img
+										li.ibg
+											+picture(jpg, `${assets}sl5-i`, 'n').s2__slide5-img
+										li.ibg
+											+picture(jpg, `${assets}sl5-i`, 'n').s2__slide5-img
+									.s2__slide5-nav.d-none.d-lg-flex 
 										a(href="#" data-uk-slider-item="previous")
-											img(src="/assets/images/left-arrow.png").sl5-slide-left-arrow
+											+icon('angle-left')
 										a(href="#" data-uk-slider-item="next")
-											img(src="/assets/images/right-arrow.png").sl5-slide-right-arrow
-										a.s2__slide-btn(href="#") 
+											+icon('angle-right')
+								.s2__slide-subtitle.d-lg-none В лагере мы играем в “армию”, взяв из нее самое ценное и интересное для детей
+								a.s2__slide-btn(href="#") 
 									span Далее
 									+icon('triangle-next')
+								
 							li.s2__slide-content.s2__slide6
-								.s2__slide-title ЗДОРОВЫЙ РЕЖИМ И АКТИВНЫЕ ИГРЫ
+								+picture(jpg, `${assets}sl6-ball`, 'n').s2__slide6-img-ball.d-none.d-lg-block
+								+picture(jpg, `${assets}sl6-brus`, 'n').s2__slide6-img-brus.d-none.d-lg-block
+								.s2__slide-title Здоровый режим и активные игры
 								.s2__slide6-list
 									.s2__slide6-item Зарницы
 									.s2__slide6-item Спортивные&nbsp;площадки
 									.s2__slide6-item Футбол
 									.s2__slide6-item Баскетбол
 									.s2__slide6-item Волейбол
-								.d-none.d-lg-block
-									img(src="/assets/images/sl6-ball.png").sl6-ball
-									img(src="/assets/images/sl6-training.png").sl6-train
 								.s2__slide6-slider(data-uk-slider)
+									+picture(png, `${assets}s2-slider-grange-top`, 'n').s2__slide6-grange-top
+									+picture(png, `${assets}s2-slider-grange-bot`, 'n').s2__slide6-grange-bot
+									+picture(png, `${assets}s2-slider-grange-left`, 'n').s2__slide6-grange-left
+									+picture(png, `${assets}s2-slider-grange-right`, 'n').s2__slide6-grange-right
 									ul.uk-slider-items 	
-										li
-											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
-										li
-											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
-										li
-											+picture(jpg, `${assets}sl6-i1`, 'sl').s2__slide6-img
-									.d-none.d-lg-block 
+										li.ibg
+											+picture(jpg, `${assets}sl6-i`, 'n').s2__slide6-img
+										li.ibg
+											+picture(jpg, `${assets}sl6-i`, 'n').s2__slide6-img
+										li.ibg
+											+picture(jpg, `${assets}sl6-i`, 'n').s2__slide6-img
+									.s2__slide6-nav.d-none.d-lg-flex 
 										a(href="#" data-uk-slider-item="previous")
-											img(src="/assets/images/left-arrow.png").sl6-slide-left-arrow
+											+icon('angle-left')
 										a(href="#" data-uk-slider-item="next")
-											img(src="/assets/images/right-arrow.png").sl6-slide-right-arrow
+											+icon('angle-right')
 								a.s2__slide-btn(href="#") 
 									span Далее
 									+icon('triangle-next')
 							li.s2__slide-content.s2__slide7
 								+picture(jpg, `${assets}sl7-i1`).s2__slide7-img-1
-								+picture(jpg, `${assets}sl7-i2`).s2__slide7-img-2
+								+picture(png, `${assets}sl7-i2`).s2__slide7-img-2
+								+picture(jpg, `${assets}sl7-i3`, 'n').s2__slide7-img-3.d-none.d-lg-block
 								.s2__slide-title ЭКСКЛЮЗИВНЫЕ НАГРАДЫ
-								.d-none.d-lg-block
-									img(src="/assets/images/sl7-i3-lg.png").s2__slide7-img-3
 								.s2__slide7-list
 									.s2__slide7-item Мы сделали специальную коллекцию наградных медалей-значков
 									.s2__slide7-item По итогам смены нашим курсантам вручаются заслуженные медали
@@ -401,29 +408,100 @@ block content
 								a.s4__tab-link(href="#") ПРОЖИВАНИЕ
 					.s4__slide 
 						ul.s4__slide-items.uk-switcher
-							- for(var x = 1; x <= 4; x++)
-								li.s4__slide-content.s4__slide1
-									+picture(png, `${assets}s4-mouse`, 'n').s4__slide1-img1
-									+picture(png, `${assets}s4-camera`, 'sl', 'l').s4__slide1-img2
-									+picture(jpg, `${assets}s4-sl1-bg`).s4__slide1-img3
-									.s4__slide-title Мышь не проскочит
-									.s4__slide-list.s4__list
-										.s4__list-title Периметр
-										.s4__list-item Детский лагерь огорожен и&nbsp;охраняется
-										.s4__list-item Контрольно-пропускной режим обеспечивает ЧОП
-									.s4__slide-list.s4__list
-										.s4__list-title Территория
-										.s4__list-item Система#[br.d-lg-none] видеонаблюдения
-										.s4__list-item Перед заездами#[br.d-none.d-lg-inline] обрататывается от клещей
-									.s4__slide-list.s4__list.s4__slide-list--last
-										.s4__list-title Корпуса
-										.s4__list-item Оснащены пожарной сигнализацией
-										.s4__list-item Система звукового тревожного оповещения
-										.s4__list-item Видеокамеры на каждом#[br.d-lg-none] этаже
+							li.s4__slide-content.s4__slide1
+								+picture(png, `${assets}s4-mouse`, 'n').s4__slide1-img1
+								+picture(png, `${assets}s4-camera`, 'sl', 'l').s4__slide1-img2
+								+picture(jpg, `${assets}s4-sl1-bg`).s4__slide1-img3
+								.s4__slide-title Мышь не проскочит
+								.s4__slide-list.s4__list
+									.s4__list-title Периметр
+									.s4__list-item Детский лагерь огорожен и&nbsp;охраняется
+									.s4__list-item Контрольно-пропускной режим обеспечивает ЧОП
+								.s4__slide-list.s4__list
+									.s4__list-title Территория
+									.s4__list-item Система#[br.d-lg-none] видеонаблюдения
+									.s4__list-item Перед заездами#[br.d-none.d-lg-inline] обрататывается от клещей
+								.s4__slide-list.s4__list.s4__slide-list--last
+									.s4__list-title Корпуса
+									.s4__list-item Оснащены пожарной сигнализацией
+									.s4__list-item Система звукового тревожного оповещения
+									.s4__list-item Видеокамеры на каждом#[br.d-lg-none] этаже
 
-									a.s4__slide-btn(href="#") 
-										span Далее
-										+icon('triangle-next')
+								a.s4__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s4__slide-content.s4__slide2
+								+picture(jpg, `${assets}s4-sl2-bg`).s4__slide2-img-bg
+								+picture(jpg, `${assets}s4-sl2-aid`, 'n').s4__slide2-img-aid.d-none.d-lg-block
+								.s4__slide-title В любой момент предоставим детям медицинскую помощь
+								.s4__slide-list.s4__list
+									.s4__list-title Мед.пункт в лагере
+									.s4__list-item Врач педиатр на месте#[br] с 8.00 до 20.00 
+									.s4__list-item Медсестры дежурят 24/7
+									.s4__list-item Процедурные кабинеты и отдельное помещение изолятра
+								.s4__slide-list.s4__list
+									.s4__list-title Травмпункт и больница
+									.s4__list-item Стационарная больница в 7 км от&nbsp;лагеря
+									.s4__list-item Постоянно дежурит наш автомобиль для нужд лагеря
+									.s4__list-item Приезд скорой помощи в случае необходимости через 15 минут
+
+								a.s4__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s4__slide-content.s4__slide3
+								+picture(jpg, `${assets}s4-sl3-plate`).s4__slide3-img-plate
+								.s4__slide-title Питание 5-ти разовое: завтрак, обед, ужин - шведский стол
+									span.d-none.d-lg-inline #[br]Полдник и второй ужин порционные: фрукты, выпечка, соки, молочные продукты.
+								+picture(jpg, `${assets}s4-sl3-bg`).s4__slide3-img-bg
+								.menu
+									.menu__text Посмотрите какие вкусные блюда в нашем рационе.
+									a.menu__btn.uk-button.btn-solid-primary(href="#menu" data-uk-toggle) ПОСМОТРЕТЬ
+
+								.eche-odin-ebanii-blok-texta.d-none.d-lg-block Едим от пуза то, что хочется, но под присмотром наших вожатых!
+
+								.s4__slide-list.s4__list.s4__list--1
+									.s4__list-title Всегда сыты
+									.s4__list-item Большой выбор блюд – ребёнок всегда найдёт то, что ему по вкусу.
+								.s4__slide-list.s4__list.s4__list--2
+									.s4__list-title Следим за питанием
+									.s4__list-item Вожатый следит за тем, что ест Ваш ребёнок. Помогает наливать горячие супы маленьким детям.
+								.s4__slide-list.s4__list.s4__list--3
+									.s4__list-title Соблюдаем нормы СанПиН 
+									.s4__list-item Меню утверждается в Роспотребнадзоре.
+
+								a.s4__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s4__slide-content.s4__slide4
+								.s4__slide-title Отдых становится приятным, когда у&nbsp;детей #[span.lg-big нет бытовых проблем]
+								.s4__slide4-slider(data-uk-slider)
+									.uk-slider-container
+										+picture(png, `${assets}s2-slider-grange-left`, 'n').s4__slide4-grange-left
+										+picture(png, `${assets}s2-slider-grange-right`, 'n').s4__slide4-grange-right
+										ul.uk-slider-items 	
+											li.ibg
+												+picture(jpg, `${assets}s4-accomodation`, 'n').s4__slide4-img
+											li.ibg
+												+picture(jpg, `${assets}s4-accomodation`, 'n').s4__slide4-img
+											li.ibg
+												+picture(jpg, `${assets}s4-accomodation`, 'n').s4__slide4-img
+									.s4__slide4-nav.d-none.d-lg-flex 
+										a(href="#" data-uk-slider-item="previous")
+											+icon('angle-left')
+										a(href="#" data-uk-slider-item="next")
+											+icon('angle-right')
+									ul.s4__slide4-dots.uk-slider-nav.uk-dotnav.slidedots
+								.s4__slide-list.s4__list.s4__list--1
+									.s4__list-item Трех и четырех местные номера с&nbsp;высокими потолками
+									.s4__list-item Удобный и чистый корпус
+									.s4__list-item Удобства в номере: душ, туалет, умывальник
+								.s4__slide-list.s4__list.s4__list--2
+									.s4__list-item На каждом этаже два больших холла с мягкой мебелью, кулеры с питьевой водой
+									.s4__list-item Купаемся в бассейне через день.
+
+								a.s4__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
 		section.s5#news
 			.container 
 				+picture(png, `${assets}s5-base`, 'n', 'n').s5__img-base
@@ -586,7 +664,7 @@ block content
 						+picture(png, `${assets}icon-mail`, 'n')
 						.s9__contacts-set 
 							span E-mail: info@vlageredu.ru
-				.s9__map
+				.s9__map(data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2236.0031074177114!2d37.761760316142!3d55.91464648696513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53127ca128c91%3A0x3f38c1255eb04214!2z0YPQuy4g0JrQvtC70L7QvdGG0L7QstCwLCA1LCDQnNGL0YLQuNGJ0LgsINCc0L7RgdC60LLQsCwgMTQxMDA5!5e0!3m2!1sru!2sru!4v1618157027463!5m2!1sru!2sru")
 					.s9__map-downloading
 						.loadingio-spinner-rolling-hz3sd853mcv
 							.ldio-ekx347c8429

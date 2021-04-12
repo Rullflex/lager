@@ -6,7 +6,6 @@ import { App } from '../../modules/scripts/_core'
 document.addEventListener(`DOMContentLoaded`, function () {
     const app = new App()
     app.init()
-
     //SECTION 2
     
     if (window.innerWidth < app.lg) {
@@ -55,7 +54,8 @@ document.addEventListener(`DOMContentLoaded`, function () {
     UIkit.switcher(`.s2__slide-tab`, {
         connect: `.s2__slide-items`,
         cls: `switcher-active`,
-        animation: 'uk-animation-fade'
+        animation: 'uk-animation-fade',
+        swiping: false
     })
     
     document.querySelectorAll(`.s2__slide-btn`).forEach(el => {
@@ -109,7 +109,8 @@ document.addEventListener(`DOMContentLoaded`, function () {
     UIkit.switcher(`.s4__slide-tab`, {
         connect: `.s4__slide-items`,
         cls: `switcher-active`,
-        animation: 'uk-animation-fade'
+        animation: 'uk-animation-fade',
+        swiping: false
     })
     
     document.querySelectorAll(`.s4__slide-btn`).forEach(el => {
@@ -153,12 +154,12 @@ document.addEventListener(`DOMContentLoaded`, function () {
     // MAP SECTION
     UIkit.scrollspy(`.s9__map`)
     document.querySelector(`.s9__map`).addEventListener(`inview`, (event) => {
-        document.querySelector(`.s9__map-script`).insertAdjacentHTML(`beforeend`, `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.667277934908!2d37.69852651613655!3d55.712155002593455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab4d89a045823%3A0x1ecdfec22421b7e5!2zMy3QuSDQo9Cz0YDQtdGI0YHQutC40Lkg0L_RgC3QtCwgMTUsINCc0L7RgdC60LLQsCwgMTE1MDg4!5e0!3m2!1sru!2sru!4v1616064460854!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`)
+        document.querySelector(`.s9__map-script`).insertAdjacentHTML(`beforeend`, `<iframe src="${document.querySelector(`.s9__map`).getAttribute('data-src')}" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`)
     })
 
     //VIDEO
     UIkit.scrollspy(`#video60`)
     document.querySelector(`#video60`).addEventListener(`inview`, (event) => {
-        document.querySelector(`#video60 .popup__body`).insertAdjacentHTML(`beforeend`, `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/0I7rYotTip4" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`)
+        document.querySelector(`#video60 .popup__body`).insertAdjacentHTML(`beforeend`, `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${document.querySelector(`#video60`).getAttribute('data-youtube-id')}" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`)
     })
 })
