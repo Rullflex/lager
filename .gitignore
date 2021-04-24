@@ -1,0 +1,39 @@
+# Файлы и папки операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы редактора
+.idea
+*.sublime*
+.vscode
+
+# Вспомогательные файлы
+*.log*
+node_modules/
+reports/
+
+# Папка с собранными файлами проекта
+build assets/
+build/
+.editorconfig
+.eslintignore
+.eslintrc.json
+.gitattributes
+.gitignore
+.pug-lint.json
+.stylelintrc.json
+build/index.html
+build/assets/images/sl2-plan-lg.webp
+build/assets/images/sl3-i2-lg.webp
+build/assets/images/sl3-i2-sm.png
+build/assets/images/sl3-i2-sm.webp
+build/assets/images/sl3-i3-sm.png
+build/assets/images/sl3-i3-sm.webp
+build/assets/images/sl5-i1-sm.jpg
+build/assets/images/sl5-i1-sm.webp
+build/assets/images/sl6-i1-sm.jpg
+build/assets/images/sl6-i1-sm.webp
+build/assets/images/sl7-i2-sm.jpg
+build/assets/images/sl7-i2-sm.webp
+build/assets/scripts/main.min.js
+build/assets/styles/main.min.css
