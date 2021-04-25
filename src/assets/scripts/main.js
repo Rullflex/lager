@@ -166,7 +166,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
     
     document.querySelectorAll(`li.s11__slide-content`).forEach((el, idx) => {
         el.addEventListener(`beforeshow`, (event) => {
-            const idx = app.getIndexOfElements(event.target, event.target.parentElement.children)
+            const idx = app.getIndexOfElements(el, el.parentElement.children)
             UIkit.slider(`.s11__tab`).show(idx)
         })
     })
