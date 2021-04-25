@@ -75,6 +75,7 @@
             background-image: linear-gradient(180deg, rgba(69,215,0,1) 0%, rgba(33,105,0,1) 50%, rgba(20,63,0,1) 100%);
             background-size: 100% 200%;
             background-position-y: top;
+            box-shadow: 0 3px 0 0 #133D00;
             &:active {
                 background-position-y: bottom;
             }  
@@ -82,7 +83,6 @@
                 @include btn-solid-sub(#133D00);
             }
             @media (min-width: map-get($grid-breakpoints, lg)) {
-                box-shadow: 0 3px 0 0 #133D00;
                 &:hover {
                     background-position-y: bottom;
                 }

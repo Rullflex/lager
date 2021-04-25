@@ -1,0 +1,336 @@
+extends modules/layout/_layout
+
+prepend head
+	title Летняя смена в “ФОРПОСТе”
+	meta(name="description", content="")
+
+block header
+	header.header(data-uk-sticky="top: 100vh; animation: uk-animation-slide-top;")
+		.container 
+			.header__row 
+				a.header__logo(href="/")
+					.header__logo-text На Главную
+					picture 
+						source(media=`(min-width: ${lg}px)` srcset=ipl)
+						source(media=`(min-width: 0px)` srcset!=`${assets}logo-sm.webp`  type=`image/webp`)
+						source(media=`(min-width: 0px)` srcset!=`${assets}logo-sm.png`  type=`image/png`)
+						img(src=ipl alt='').header__logo-img
+				ul.header__menu
+					li.header__menu-item
+						a.header__menu-link(href="#about" data-uk-scroll) Программа
+					li.header__menu-item
+						a.header__menu-link(href="#tour" data-uk-scroll) Стоимость
+					li.header__menu-item
+						a.header__menu-link(href="#news" data-uk-scroll="offset: 30") Новости
+					li.header__menu-item
+						a.header__menu-link(href="#accommodation" data-uk-scroll="offset: 30") Проживание
+				.header__phones 
+					//- a.addit(href=`tel:+79661314129`) +7 (966) 131-41-29
+					a(href=`tel:+74957659016`) +7 (495) 765-90-16
+				a.header__burger.uk-icon(href="#")
+					- for (var x = 0; x < 4; x++) 
+						i
+				.header__drop(data-uk-dropdown="mode: click; pos: bottom-right; boundary: .header; boundary-align: true; animation: uk-animation-slide-right-small; duration: 300")
+					.header__drop-main
+						ul.header__drop-menu
+							li.header__drop-item
+								a.header__drop-link(href="#" data-uk-scroll) Программа
+							li.header__drop-item
+								a.header__drop-link(href="#" data-uk-scroll) Стоимость
+							li.header__drop-item
+								a.header__drop-link(href="#news" data-uk-scroll="offset: 30") Новости
+							li.header__drop-item
+								a.header__drop-link(href="#accommodation" data-uk-scroll="offset: 30") Проживание
+						a.header__drop-tel(href=`tel:+74957659016`) +7 (495) 765-90-16
+
+block footer 
+	footer.footer 
+		.footer__ctn.container
+			a.footer__logo(href="/")
+				img(src=`${assets}logo-lg.png` alt='')
+			ul.footer__menu
+				li.footer__menu-item
+					a.footer__menu-link(href="#about" data-uk-scroll) Программа
+				li.footer__menu-item
+					a.footer__menu-link(href="#tour" data-uk-scroll) Стоимость
+				li.footer__menu-item
+					a.footer__menu-link(href="#news" data-uk-scroll="offset: 30") Новости
+				li.footer__menu-item
+					a.footer__menu-link(href="#accommodation" data-uk-scroll="offset: 30") Проживание
+			.footer__phones 
+				a(href=`tel:84957659016`) 8 (495) 765-90-16
+				a(href=`tel:89661314129`) 8 (966) 131-41-29
+			.footer__socials
+				a(href=`#` target="_blank")
+					img.lazyload(src=`${assets}icon-vk.png` alt="")
+				a(href=`#` target="_blank")
+					img.lazyload(src=`${assets}icon-inst.png` alt="")
+				a(href=`#` target="_blank")
+					img.lazyload(src=`${assets}icon-yt.png` alt="")
+				a(href=`#` target="_blank")
+					img.lazyload(src=`${assets}icon-fb.png` alt="")
+			.footer__creds
+				p.footer__creds-ooo ООО "Детский клуб "Охотники за удачей"
+				p.footer__creds-inn ИНН 5029161296
+				a(href="#" target="_blank").footer__creds-policy Политика конфиденциальности
+block content
+	main.main 
+		section.s10
+			.s10__ibg.ibg 
+				+picture-min(jpg, `${assets}s10-bg`, `${assets}s1-bg`)
+			+picture(png, `${assets}grange-bot`).s10__img-grange-bot
+			.container 
+				.s10__header 
+					a.s10__header-logo(href="/")
+						.s10__header-logo-text На Главную
+					.s10__header-title Детский военно-спортивный лагерь
+					//- ul.s1__header__menu
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#about" data-uk-scroll) О нас
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#tour" data-uk-scroll) Смены
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#accommodation" data-uk-scroll="offset: 30") Проживание
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#news" data-uk-scroll="offset: 30") Новости
+						li.s1__header__menu-item
+							a.s1__header__menu-link(href="#contacts" data-uk-scroll) Контакты
+					.s10__header__contacts 
+						.s10__header__phones 
+							//- a(href=`tel:+79661314129`) +7 (966) 131-41-29
+							a(href=`tel:+74957659016`) +7 (495) 765-90-16
+						//- .s1__header__contacts-ctn
+							.s1__header__contacts-age 10+
+							a.s1__header__contacts-btn.uk-button.btn-outline-primary(href="#callback" data-uk-toggle) ЗАКАЗАТЬ ЗВОНОК
+				h1.s10__title ЛЕТНЯЯ СМЕНА#[br.d-lg-none] В #[span.s10__title-name  “ФОРПОСТе”]
+				.s10__descr Летом у нас проводятся самые масштабные смены не только по количеству дней, но и по насыщенности мероприятиями. Такой объёмной программы нет в других лагерях, мы проверяли! В играх используется безопасное электронно-цифровое оборудование и оружие "ЛАЗЕРТАГ"!
+				form.s10__form.form(action="#")
+					.form__input-wrap.input-wrap 
+						input.form__input.input(type="email" name="email" placeholder="E-MAIL")
+					.form__submit 
+						button.form__btn.uk-button.btn-solid-primary ПЛАН СМЕНЫ
+						//- .form__agr
+							a(href="#" target="_blank") Даю согласие на обработку персональных данных
+				.s10__form-subtext Напишите свою почту и мы вышлем вам «план смены»
+
+
+		//- небольшой гайд
+		//-----------------
+		.d-none 
+			//- кнопки
+			//- установить стили: width, height, fz
+			a.uk-button.btn-solid-primary ТЕКСТ
+			//- установить стили: width, line-height (равный высоте), fz
+			a.uk-button.btn-outline-primary ЗАКАЗАТЬ ЗВОНОК
+
+			//- вызов попапа
+			//- href = id попапа + data-uk-toggle	
+			a(href="#video60" data-uk-toggle)
+
+			//- картинка внутри блока абсолютная и занимает 100% пространства не изменяя своих пропорций			
+			.ibg 
+				+picture(png, `${assets}some-img`, 'sl')
+
+			//- picture
+			//- в папке src/assets/images/ лежат 2 картинки: some-img-sm.png и some-img-lg.png
+			+picture(png, `${assets}some-img`, 'sl') 
+			//- в папке src/assets/images/ лежит 1 картинка: some-img.jpg
+			+picture(jpg, `${assets}some-img`, 'n')
+		//-----------------
+
+		section.s11 
+			.container 
+				.s11__title А ЧТО ИНТЕРЕСНОГО?
+				.s11__widget
+					.s11__tab
+						ul.s11__slide-tab.uk-slider-items
+							li.s11__tab-item
+								a.s11__tab-link(href="#") ГЛАВНЫЕ ПРИКЛЮЧЕНИЯ
+							li.s11__tab-item
+								a.s11__tab-link(href="#") НОВИНКИ СМЕНЫ
+							li.s11__tab-item
+								a.s11__tab-link(href="#") МАСТЕР-КЛАССЫ
+							li.s11__tab-item
+								a.s11__tab-link(href="#") ДРУГИЕ АКТИВНОСТИ
+					.s11__slide 
+						ul.s11__slide-items.uk-switcher
+							li.s11__slide-content.s11__slide-1
+								ul(data-uk-accordion)
+									li
+										a.uk-accordion-title(href="#") title
+										.uk-accordion-content content
+									li
+										a.uk-accordion-title(href="#") title
+										.uk-accordion-content content
+									li
+										a.uk-accordion-title(href="#") title
+										.uk-accordion-content content
+							li.s11__slide-content.s11__slide-2
+							li.s11__slide-content.s11__slide-3
+							li.s11__slide-content.s11__slide-4
+
+
+		section.s5#news
+			.container 
+				+picture(png, `${assets}s5-base`, 'n', 'n').s5__img-base
+				.s5__title Что у нас нового?
+				.s5__widget 
+					.s5__tab
+						button.s5__tab-dropbtn(type="button") 
+							div
+								.date 8.10.2020
+								.descr Открыты продажи на зиму
+							+icon('angle-down')
+						ul.s5__slide-tab.s5__tab-drop
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 8.10.2020
+									.descr Открыты продажи на зиму
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 17.08.2020
+									.descr Фото со сплава медведица
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 10.08.2020
+									.descr Завершился поход по р. Угра
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 03.08.2020
+									.descr Завершился поход по р. Нерль
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 29.07.2020
+									.descr Сплав “Медведица” стартует по графику
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 29.07.2020
+									.descr Сплав “Медведица” стартует по графику
+							li.s5__tab-item
+								a.s5__tab-link(href="#") 
+									.date 29.07.2020
+									.descr Сплав “Медведица” стартует по графику
+							
+					.s5__slide 
+						ul.s5__slide-items.uk-switcher
+							- for (var x = 1; x <= 7; x++)
+								li.s5__slide-content
+									.s5__slide-descr Открыта продажа путёвок на зимние программы нa&nbsp;школьных каникулах 2020-2021
+									.s5__slide-photos
+										.s5__slide-photo.ibg
+											+picture(jpg, `${assets}s3-i1`)
+										.s5__slide-photo.ibg
+											+picture(jpg, `${assets}s3-i1`)
+									a.s5__slide-btn.uk-button.btn-solid-primary(href="#") Узнать больше
+
+		section.s4#accommodation
+			.container 
+				.s4__widget
+					.s4__tab
+						ul.s4__slide-tab.uk-slider-items
+							li.s4__tab-item
+								a.s4__tab-link(href="#") БЕЗОПАСНОСТЬ
+							li.s4__tab-item
+								a.s4__tab-link(href="#") ЗДОРОВЬЕ
+							li.s4__tab-item
+								a.s4__tab-link(href="#") ПИТАНИЕ
+							li.s4__tab-item
+								a.s4__tab-link(href="#") ПРОЖИВАНИЕ
+					.s4__slide 
+						ul.s4__slide-items.uk-switcher
+							li.s4__slide-content.s4__slide1
+								+picture(png, `${assets}s4-mouse`, 'n').s4__slide1-img1
+								+picture(png, `${assets}s4-camera`, 'sl', 'l').s4__slide1-img2
+								+picture(jpg, `${assets}s4-sl1-bg`).s4__slide1-img3
+								.s4__slide-title Мышь не проскочит
+								.s4__slide-list.s4__list
+									.s4__list-title Периметр
+									.s4__list-item Детский лагерь огорожен и&nbsp;охраняется
+									.s4__list-item Контрольно-пропускной режим обеспечивает ЧОП
+								.s4__slide-list.s4__list
+									.s4__list-title Территория
+									.s4__list-item Система#[br.d-lg-none] видеонаблюдения
+									.s4__list-item Перед заездами#[br.d-none.d-lg-inline] обрататывается от клещей
+								.s4__slide-list.s4__list.s4__slide-list--last
+									.s4__list-title Корпуса
+									.s4__list-item Оснащены пожарной сигнализацией
+									.s4__list-item Система звукового тревожного оповещения
+									.s4__list-item Видеокамеры на каждом#[br.d-lg-none] этаже
+
+								a.s4__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s4__slide-content.s4__slide2
+								+picture(jpg, `${assets}s4-sl2-bg`).s4__slide2-img-bg
+								+picture(jpg, `${assets}s4-sl2-aid`, 'n').s4__slide2-img-aid.d-none.d-lg-block
+								.s4__slide-title В любой момент предоставим детям медицинскую помощь
+								.s4__slide-list.s4__list
+									.s4__list-title Мед.пункт в лагере
+									.s4__list-item Врач педиатр на месте#[br] с 8.00 до 20.00 
+									.s4__list-item Медсестры дежурят 24/7
+									.s4__list-item Процедурные кабинеты и отдельное помещение изолятра
+								.s4__slide-list.s4__list
+									.s4__list-title Травмпункт и больница
+									.s4__list-item Стационарная больница в 7 км от&nbsp;лагеря
+									.s4__list-item Постоянно дежурит наш автомобиль для нужд лагеря
+									.s4__list-item Приезд скорой помощи в случае необходимости через 15 минут
+
+								a.s4__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s4__slide-content.s4__slide3
+								+picture(jpg, `${assets}s4-sl3-plate`).s4__slide3-img-plate
+								.s4__slide-title Питание 5-ти разовое: завтрак, обед, ужин - шведский стол
+									span.d-none.d-lg-inline #[br]Полдник и второй ужин порционные: фрукты, выпечка, соки, молочные продукты.
+								+picture(jpg, `${assets}s4-sl3-bg`).s4__slide3-img-bg
+								.menu
+									.menu__text Посмотрите какие вкусные блюда в нашем рационе.
+									a.menu__btn.uk-button.btn-solid-primary(href="#menu" data-uk-toggle) ПОСМОТРЕТЬ
+
+								.eche-odin-ebanii-blok-texta.d-none.d-lg-block Едим от пуза то, что хочется, но под присмотром наших вожатых!
+
+								.s4__slide-list.s4__list.s4__list--1
+									.s4__list-title Всегда сыты
+									.s4__list-item Большой выбор блюд – ребёнок всегда найдёт то, что ему по вкусу.
+								.s4__slide-list.s4__list.s4__list--2
+									.s4__list-title Следим за питанием
+									.s4__list-item Вожатый следит за тем, что ест Ваш ребёнок. Помогает наливать горячие супы маленьким детям.
+								.s4__slide-list.s4__list.s4__list--3
+									.s4__list-title Соблюдаем нормы СанПиН 
+									.s4__list-item Меню утверждается в Роспотребнадзоре.
+
+								a.s4__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+							li.s4__slide-content.s4__slide4
+								.s4__slide-title Отдых становится приятным, когда у&nbsp;детей #[span.lg-big нет бытовых проблем]
+								.s4__slide4-slider(data-uk-slider)
+									.uk-slider-container
+										+picture(png, `${assets}s2-slider-grange-left`, 'n').s4__slide4-grange-left
+										+picture(png, `${assets}s2-slider-grange-right`, 'n').s4__slide4-grange-right
+										ul.uk-slider-items 	
+											li.ibg
+												+picture(jpg, `${assets}s4-accomodation`, 'n').s4__slide4-img
+											li.ibg
+												+picture(jpg, `${assets}s4-accomodation`, 'n').s4__slide4-img
+											li.ibg
+												+picture(jpg, `${assets}s4-accomodation`, 'n').s4__slide4-img
+									.s4__slide4-nav.d-none.d-lg-flex 
+										a(href="#" data-uk-slider-item="previous")
+											+icon('angle-left')
+										a(href="#" data-uk-slider-item="next")
+											+icon('angle-right')
+									ul.s4__slide4-dots.uk-slider-nav.uk-dotnav.slidedots
+								.s4__slide-list.s4__list.s4__list--1
+									.s4__list-item Трех и четырех местные номера с&nbsp;высокими потолками
+									.s4__list-item Удобный и чистый корпус
+									.s4__list-item Удобства в номере: душ, туалет, умывальник
+								.s4__slide-list.s4__list.s4__list--2
+									.s4__list-item На каждом этаже два больших холла с мягкой мебелью, кулеры с питьевой водой
+									.s4__list-item Купаемся в бассейне через день.
+
+								a.s4__slide-btn(href="#") 
+									span Далее
+									+icon('triangle-next')
+		
+		

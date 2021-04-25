@@ -151,6 +151,28 @@ document.addEventListener(`DOMContentLoaded`, function () {
     })
     //END SECTION 5
 
+
+    //SECTION 11
+    
+    if (window.innerWidth < app.lg) {
+        UIkit.slider(`.s11__tab`)
+    }
+    UIkit.switcher(`.s11__slide-tab`, {
+        connect: `.s11__slide-items`,
+        cls: `switcher-active`,
+        animation: 'uk-animation-fade',
+        swiping: false
+    })
+    
+    document.querySelectorAll(`li.s11__slide-content`).forEach((el, idx) => {
+        el.addEventListener(`beforeshow`, (event) => {
+            const idx = app.getIndexOfElements(event.target, event.target.parentElement.children)
+            UIkit.slider(`.s11__tab`).show(idx)
+        })
+    })
+    //END SECTION 11
+
+
     // MAP SECTION
     UIkit.scrollspy(`.s9__map`)
     document.querySelector(`.s9__map`).addEventListener(`inview`, (event) => {
